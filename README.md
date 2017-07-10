@@ -2,8 +2,9 @@
 Training for create a REST API, for question and answer sites such as Stack Overflow.
 - [x] CRUD
 - [x] Express-es6-REST-API
+- [x] Mongoose
 
-## Screenshots
+
 ```sh
 Express & ES6 REST API Boilerplate
 ==================================
@@ -19,3 +20,5 @@ This is a straightforward boilerplate for building REST APIs with ES6 and Expres
 
 > Tip: If you are using [Mongoose](https://github.com/Automattic/mongoose), you can automatically expose your Models as REST resources using [restful-mongoose](https://git.io/restful-mongoose).
 ```
+
+## Screenshots
