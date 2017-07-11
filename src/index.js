@@ -37,6 +37,16 @@ db.once('open', function() {
 	console.log('db connection succesful');
 });
 
+app.use((req, res, next) => {
+	res.header("Access-Control-Allow-Origin", '*'); //ok for req from any domain
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); //which headers are accepted
+	if (req.method === 'OPTIONS') {
+		res.header('Access-Control-Allow-Methods', 'PUT,POST,DELETE');
+		return res.status(200).json({});
+	}
+	next();
+})
+
 app.use('/questions', routes);
 
 // catch 404 status code and forward to error handler
@@ -53,7 +63,8 @@ app.use((err, req, res, next) => {
 		error: {
 			message: err.message
 		}
-	})
+	});
+	next();
 })
 
 // connect to db
