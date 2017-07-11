@@ -3,6 +3,7 @@ Training for create a REST API, for question and answer sites such as Stack Over
 - [x] CRUD
 - [x] Express-es6-REST-API
 - [x] Mongoose
+- [x] CROS
 
 Tested with postman
 ```sh
